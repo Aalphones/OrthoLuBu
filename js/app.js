@@ -7,7 +7,7 @@ function kenBurns() {
     } else {
         $('.ken-burns').attr("src","img/header_large.jpg");
     }
-    $('.ken-burns').width(width+200);
+    $('.ken-burns').width(width+400);
 }
 
 function overlay() {
