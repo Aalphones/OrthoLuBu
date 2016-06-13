@@ -8,39 +8,6 @@ main {
     flex: 1 0 auto;
 }
 
-.parallax-container {
-    h2 {
-        padding: 12px;
-        color: @text-light;
-        border-top-left-radius: 1em;
-        border-top-right-radius: 15px;
-        z-index: 1;
-        margin: 0;
-        font-size: 3rem;
-        letter-spacing: 2px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    h5 {
-        color: @text-light;
-        padding: 20px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 2em;
-        z-index: 2;
-        margin: 0;
-        font-size: 1.4rem;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    &:not(#hero) {
-        height: 300px;
-        .parallax {
-            background-color: black;
-            img {
-                opacity: 0.5;
-            }
-        }
-    }
-}
-
 ul {
     li {
         ul {
@@ -49,7 +16,18 @@ ul {
     }
 }
 
-.materialboxed {
-    float: left;
-    margin: 10px;
+a {
+    color: @text-link;
+    &:hover {
+        
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @dark;
+    letter-spacing: 2px;
+}
+
+blockquote {
+    border-left: 5px solid @dark;
 }
