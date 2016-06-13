@@ -34,7 +34,7 @@ module.exports = function (grunt) {
             files: {
                 src: [
                     'node_modules/jquery/dist/jquery.js',
-					'node_modules/bootstrap/dist/js/bootstrap.min.js',
+                    'node_modules/materialize-css/bin/materialize.js',
                     'js/app.js'
                 ],
                 dest: 'js/compressed.js'
@@ -86,6 +86,6 @@ module.exports = function (grunt) {
     });
 
     require('load-grunt-tasks')(grunt);
-    grunt.registerTask('default', ['jshint','uglify', 'less', 'compress']);
+    grunt.registerTask('default', ['uglify', 'less', 'compress']);
 
 };
