@@ -2,6 +2,24 @@ nav {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 2;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        background-color: @primary;
+        .nav-wrapper {
+            #nav-mobile {
+                li {
+                    a {
+                        color: @text-link;
+                        &:hover {
+                            background-color: rgba(255,255,255,0.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
     .nav-wrapper {
         margin: 0 20px;
         #nav-mobile {
