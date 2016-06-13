@@ -1,12 +1,37 @@
-.title_brand {
-    h1 {
-        font-size: 2.1rem;
-        border-bottom: 5px solid @primary;
-        margin: 0;
-        padding: 2.1rem 0 1rem 1rem;
+#page-header {
+    //background-image: url('../img/header_large.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    min-height: 260px;
+    position: relative;
+    .ken-burns {
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 20s;
+        transition: all 20s;
+        top: -100px;
+        right: -100px;
+        &.zoomed {
+            -ms-transform: scale(1.1,1.1) translateY(50px);
+            -webkit-transform: scale(1.1,1.1) translateY(50px);
+            transform: scale(1.1,1.1) translate(-100px, 100px);
+        }
     }
-    h2 {
-        font-size: 1.2rem;
-        margin: 10px 1rem;
+    .title_brand {
+        h1 {
+            font-size: 2.1rem;
+            border-bottom: 5px solid @primary;
+            margin: 0;
+            padding: 2.1rem 0 1rem 1rem;
+            color: @primary;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin: 10px 1rem;
+            color: @primary;
+        }
+        margin-bottom: 40px;
     }
 }
