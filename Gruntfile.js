@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                     optimization: 2
                 },
                 files: {
-                    'css/style.css': 'css/style.less'
+                    'css/compressed.css': 'css/style.less'
                 }
             }
         },
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
             css: {
                 options: compressOptions,
                 files: {
-                    'css/style.css.gz': 'css/style.css'
+                    'css/compressed.css.gz': 'css/compressed.css'
                 }
             }
         },

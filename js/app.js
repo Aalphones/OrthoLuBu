@@ -1,11 +1,12 @@
 function kenBurns() {
     var width = $(document).width();
+    var uri = $('#uri').text();
     if (width <= 600) {
-        $('.ken-burns').attr("src","img/header_small.jpg");
+        $('#default-header').attr("src",uri + "/img/header_small.jpg");
     } else if (width <= 992) {
-        $('.ken-burns').attr("src","img/header_medium.jpg");
+        $('#default-header').attr("src",uri + "/img/header_medium.jpg");
     } else {
-        $('.ken-burns').attr("src","img/header_large.jpg");
+        $('#default-header').attr("src",uri + "/img/header_large.jpg");
     }
     $('.ken-burns').width(width+400);
 }
