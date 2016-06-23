@@ -3,9 +3,37 @@ main {
 }
 
 .card {
+    &.team-card {
+        
+    }
+    .card-panel {
+        background: @light;
+        .card-icon {
+            font-size: 4em;
+            color: @icons-text;
+        }
+        span {
+            color: @secondary-text;
+            strong {
+                color: @primary-text;
+            }
+        }
+    }
     .card-content {
+        .icon-block {
+            h2 {
+                color: @primary;
+            }
+            h5 {
+                color: @primary-text;
+            }
+        }
         p {
             margin-bottom: 50px;
+            color: @secondary-text;
+            strong {
+                color: @primary-text;
+            }
         }
     }
     .card-title {
