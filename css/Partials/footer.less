@@ -1,17 +1,21 @@
-footer&.page-footer {
-    background-color: @primary;
-    .contact {
-        .row {
-            margin-bottom: 0;
+#page-footer {
+    .row {
+        margin: 0 auto;
+        ul {
+            margin: 20px auto;
+            li {
+                display: inline-block;
+                a {
+                    padding: 20px 10px;
+                }
+            }
         }
-    }
-    .footer-copyright {
-        a {
-            display: inline-block;
-            line-height: 50px;
-            padding: 0 10px;
-            &:hover {
-                background-color: rgba(0,0,0,0.1);
+        p {
+            margin: auto;
+            display: block;
+            color: @secondary-text;
+            a {
+                color: @dark;
             }
         }
     }

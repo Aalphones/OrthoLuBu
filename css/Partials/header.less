@@ -1,38 +1,26 @@
-#page-header {
-    overflow: hidden;
-    min-height: 320px;
-    position: relative;
+#top-bar {
     background-color: @primary;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    .ken-burns {
-        position: absolute;
-        z-index: 1;
-        -webkit-transition: all 20s, opacity 1ms;
-        transition: all 20s, opacity 1ms;
-        top: -100px;
-        right: -150px;
-        height: auto;
-        &.zoomed {
-            -ms-transform: scale(1.1,1.1) translate(-100px, 50px);
-            -webkit-transform: scale(1.1,1.1) translate(-100px, 50px);
-            transform: scale(1.1,1.1) translate(-100px, 50px);
+    height: 200px;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.slider {
+    .slides {
+        li {
+            .caption {
+                &.light {
+                    h5, h3 {
+                        color: @icons-text;
+                    }
+                }
+                &.dark {
+                    h5, h3 {
+                        color: @primary-text;
+                    }
+                }
+            }
         }
-    }
-    .title_brand {
-        z-index: 2;
-        position: relative;
-        h1 {
-            font-size: 2.1rem;
-            border-bottom: 5px solid @primary;
-            margin: 0;
-            padding: 2.1rem 0 1rem 1rem;
-            color: @primary;
-        }
-        h2 {
-            font-size: 1.2rem;
-            margin: 10px 1rem;
-            color: @primary;
-        }
-        margin-bottom: 80px;
     }
 }

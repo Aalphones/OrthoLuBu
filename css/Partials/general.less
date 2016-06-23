@@ -2,6 +2,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: @body-bg;
 }
 
 main {
@@ -17,19 +18,19 @@ ul {
 }
 
 a {
-    color: @text-link;
+    color: @accent;
     &:hover {
-        
+        color: @dark;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: @dark;
+    color: @primary-text;
     letter-spacing: 2px;
 }
 
 blockquote {
-    border-left: 5px solid @dark;
+    border-left: 5px solid @primary-text;
 }
 
 .hidden {

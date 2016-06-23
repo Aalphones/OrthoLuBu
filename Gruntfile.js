@@ -28,8 +28,7 @@ module.exports = function (grunt) {
             options: {
                 sourceMap: true,
                 preserveComments: 'none',
-                mangle: true,
-                compress: {}
+                mangle: true
             },
             files: {
                 src: [
