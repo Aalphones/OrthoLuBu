@@ -3,8 +3,34 @@ main {
 }
 
 .card {
+    .chip {
+        margin: 2px 5px;
+        background: @primary;
+    }
     &.team-card {
-        
+        padding: 15px;
+        .select {
+            a {
+                opacity: 0.5;
+                &.active {
+                    opacity: 1;
+                }
+            }  
+        }
+        .select-wrapper {
+            overflow: hidden;
+            .select-content {
+                height: 0px;
+                transform: scale(1, 0);
+                &.active {
+                    height: auto;
+                    display: block;
+                    transform: scale(1, 1);
+                    transition: all 1s ease-in-out;
+                    -webkit-transition: all 1s ease-in-out;
+               }
+       }
+        }
     }
     .card-panel {
         background: @light;
