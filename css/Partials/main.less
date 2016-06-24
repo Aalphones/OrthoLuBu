@@ -56,6 +56,23 @@ main {
         }
     }
     .card-content {
+        .btn {
+            background: @primary;
+        }
+        .input-field {
+            input {
+                border-bottom: 1px solid @primary !important;
+            }
+            
+            textarea {
+            }
+            
+            label {
+                &.active {
+                    color: @primary;
+                }
+            }
+        }
         .icon-block {
             h2 {
                 color: @primary;
