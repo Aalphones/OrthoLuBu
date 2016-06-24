@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+        <title>Ortho LuBu</title>
+
+        <link href="css/compressed.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <script src="js/compressed.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var lat1;
+                var lng1;
+                var geocoder = new google.maps.Geocoder();
+                
+                //convert location into longitude and latitude
+                geocoder.geocode({
+                    address: "Martin-Luther-Str. 69, 71636 Ludwigsburg"
+                }, function(locResult) {
+                    lat1 = locResult[0].geometry.location.lat();
+                    lng1 = locResult[0].geometry.location.lng();
+                    
+                    var mapProp = {
+                        center:new google.maps.LatLng(lat1,lng1),
+                        zoom:15,
+                        mapTypeId:google.maps.MapTypeId.ROADMAP
+                    };
+                    
+                    var marker = new google.maps.Marker({
+                        position:new google.maps.LatLng(lat1,lng1),
+                        map: map,
+                        title: 'Praxis für Orthopädie und Unfallchirurgie, Dr. med. Thomas Oechsler, Eric Vahsen'
+                    });
+                    
+                    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                    
+                    marker.setMap(map);
+                }); 
+              
+            }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <section id="top-bar">
+        </section>
+
+        <main class="container">
+            <nav class="card hide-on-med-and-down" id="main-nav">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo">
+                        <h2>Dr. med Thomas Oechsler<br>
+                            Eric Vahsen</h2>
+                    </a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="index.html#team">Praxisteam</a></li>
+                        <li><a href="spektrum.html">Unser Spektrum</a></li>
+                        <li><a href="schwerpunkte.html">Schwerpunkte</a></li>
+                        <li><a href="zusatz.html">Zusatzleistungen</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <section class="row">
+                <div class="col s12">
+                    <article class="card">
+                       <div id="googleMap"></div>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="row">
+                <div class="col s12 m6">
+                    <article class="card">
+                        <div class="card-content">
+                            <h5>Kontaktadresse</h5>
+                            <p>
+                                <strong>Praxis für Orthopädie und Unfallchirurgie<br>
+                                Dr. med. Thomas Oechsler, Eric Vahsen</strong><br>
+                                Martin-Luther-Str. 69<br>
+                                71636 Ludwigsburg<br>
+                                <i class="fa fa-phone"></i> Telefon 07141 38 88 00<br>
+                                <i class="fa fa-fax"></i> Fax 07141 38 88 05 0<br>
+                                <i class="fa fa-comment"></i> Privatsprechstunde 0176 50 63 72 63
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+        </main>
+        <footer id="page-footer">
+            <div class="row valign-wrapper">
+                <p>
+                    <a href="javascript:toTop();">Nach oben?</a>
+                </p>
+            </div>
+            <div class="row valign-wrapper">
+                <p>
+                    Copyright 2016 Dr. med. Thomas Oechsler, Eric Vahsen
+                </p>
+            </div>
+            <div class="row valign-wrapper">
+                <ul>
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Impressum</a></li>
+                    <li><a href="">Anfahrt</a></li>
+                    <li><a href="">Links</a></li>
+                </ul>
+            </div>
+        </footer>
+        <ul id="side-nav" class="side-nav">
+            <li class="logo">
+                <h2>Dr. med Thomas Oechsler<br>
+                    Eric Vahsen</h2>
+                <h5>Fachärzte für Orthopädie und Unfallchirurgie</h5>
+            </li>
+            <li><a href="index.html"><i class="fa fa-home"></i> Startseite</a></li>
+            <li><a href="index.html#team"><i class="fa fa-users"></i> Praxisteam</a></li>
+            <li><a href="spektrum.html"><i class="fa fa-book"></i> Unser Spektrum</a></li>
+            <li><a href="schwerpunkte.html"><i class="fa fa-graduation-cap"></i> Schwerpunkte</a></li>
+            <li><a href="zusatzleistungen.html"><i class="fa fa-gift"></i> Zusatzleistungen</a></li>
+        </ul>
+        <div class="contact-button">
+            <a class="btn-floating btn-large" href="kontakt.html">
+                <i class="fa fa-envelope-o"></i>
+            </a>
+        </div>
+        <div class="menu-button">
+            <a class="btn-floating btn-large button-collapse" data-activates="side-nav">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </body>
+</html>

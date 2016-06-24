@@ -16,12 +16,17 @@ function toTop() {
 
 function select() {
     $('.select a').click(function(e) {
-        $('.select-content').removeClass('active');
-        $('.select a').removeClass('active');
-        e.preventDefault();
-        $(this).addClass('active');
-        var id = $(this).attr('href');
-        $(id).addClass('active');
+        if ($(this).hasClass('active')) {
+            $('.select-content').removeClass('active');
+            $('.select a').removeClass('active');
+        } else {
+            $('.select-content').removeClass('active');
+            $('.select a').removeClass('active');
+            e.preventDefault();
+            $(this).addClass('active');
+            var id = $(this).attr('href');
+            $(id).addClass('active');
+        }
     });
 }
 

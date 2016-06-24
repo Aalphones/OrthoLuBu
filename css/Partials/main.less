@@ -4,8 +4,11 @@ main {
 
 .card {
     .chip {
-        margin: 2px 5px;
+        margin: 2px;
         background: @primary;
+    }
+    #googleMap {
+        height: 500px;
     }
     &.team-card {
         padding: 15px;
@@ -22,6 +25,13 @@ main {
             .select-content {
                 height: 0px;
                 transform: scale(1, 0);
+                color: @secondary-text;
+                ul {
+                    padding-left: 10px;
+                    margin: 0;
+                    li {
+                    }
+                }
                 &.active {
                     height: auto;
                     display: block;
